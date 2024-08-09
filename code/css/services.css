@@ -1,0 +1,264 @@
+@import url("/css/header_style.css");
+@import url("/css/print.css");
+/* this is to change the color in header_style to 
+accomdate it for about page*/
+header,
+.services {
+  background: #212121;
+}
+
+#menu-toggle {
+  background: #212121;
+}
+
+#mobile-nav ul {
+  background: #212121;
+}
+
+@media (min-width: 1025px) {
+  #desktop-nav,
+  #header-desktop-btn {
+    display: block;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    gap: 3vw;
+    font-weight: 600;
+  }
+  nav ul li {
+    list-style-type: none;
+    cursor: pointer;
+  }
+  .row {
+    flex-direction: row !important;
+  }
+  .service:hover {
+    background: #0b8f45;
+    /* padding: 20px 12px; */
+    box-sizing: border-box;
+  }
+  .service h3 {
+    font-size: 1.2vw;
+  }
+}
+
+/* Main Content Styles */
+main {
+  /* padding: 2vh 2vh 2vh 2vh; */
+  text-align: center;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #212121; /* Changed to a solid color if no image */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page1 > h1 {
+  font-size: 3.5em;
+  line-height: 8vw;
+  font-weight: bold;
+  text-align: center;
+  color: #ddd;
+}
+
+#page1 > h1 span {
+  color: #0da34e;
+}
+
+#page1 > p {
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1vw;
+  font-size: 1.5em;
+  width: 80%;
+}
+.services h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.services p {
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.service {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #0b8f45;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  box-shadow: 0 10px 20px rgba(32, 235, 62, 0.2);
+}
+.service-detail h4 {
+  margin-top: 20px;
+  font-size: calc(1rem + 0.25vw);
+}
+
+.service-detail ul {
+  list-style-type: none;
+}
+
+.service-detail li {
+  padding: 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-item {
+    max-width: 100%;
+  }
+}
+
+/* pricing  */ /* Basic Styling */
+.pricing {
+  text-align: center;
+  padding: 4em 1em; /* Smaller padding on mobile */
+  background-color: #212121;
+  color: white;
+}
+
+.pricing h2 {
+  font-size: 2em; /* Adjustable for different screen sizes */
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.pricing-table {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center;
+  max-width: 1200px; /* Max width to control layout on larger screens */
+  margin: auto; /* Center align the pricing table */
+}
+
+.pricing-item {
+  background: #333;
+  border: 1px solid #0b8f45;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Fixed width for all items */
+  margin-bottom: 1em; /* Space between items on mobile */
+}
+
+.pricing-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #0b8f45;
+}
+
+.price {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.price span {
+  font-size: 0.5em;
+}
+
+.pricing-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+  text-align: left;
+}
+
+.pricing-item ul li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #0b8f45;
+}
+
+.pricing-item ul li:last-child {
+  border-bottom: none;
+}
+
+.cta {
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Tablets and Larger Devices */
+@media (min-width: 720px) and (max-width: 1024px) {
+  .pricing h2 {
+    font-size: 3.5em; /* Larger font size for desktop */
+  }
+
+  .pricing-table {
+    flex-direction: row; /* Layout items side-by-side on larger screens */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pricing-item,
+  .service {
+    flex: 1 1 45%; /* Flex basis set to fixed width, flex-grow and flex-shrink to 1 */
+    margin: 1em; /* Uniform margin around items */
+  }
+}
+@media (min-width: 1024px) {
+  .pricing h2 {
+    font-size: 3.5em; /* Larger font size for desktop */
+  }
+
+  .pricing-table {
+    flex-direction: row; /* Layout items side-by-side on larger screens */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pricing-item,
+  .service {
+    flex: 1 1 22%; /* Flex basis set to fixed width, flex-grow and flex-shrink to 1 */
+    margin: 1em; /* Uniform margin around items */
+  }
+}

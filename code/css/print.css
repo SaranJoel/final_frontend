@@ -1,0 +1,38 @@
+/* for printing the screen */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header,
+  nav,
+  footer,
+  .newsletter-container,
+  .moving-div {
+    display: none; /* Hide elements that are not needed in print */
+  }
+
+  section {
+    background: transparent;
+    color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a {
+    color: black;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
